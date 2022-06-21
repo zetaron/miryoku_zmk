@@ -1,0 +1,14 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build zkbd"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: "nice_nano_v2"
+      shields: '["zkbd_left","zkbd_right"]'
+      alphas: "qwerty"
+      nav: "vi"
